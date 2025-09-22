@@ -27,7 +27,7 @@ public class CountryDaoImpl extends AbstractDao implements CountryDao {
             if (transaction != null) {
                 transaction.rollback();
             }
-            throw new DataProcessingException("Error while saving actor", e);
+            throw new DataProcessingException("Error while saving country", e);
         } finally {
             if (session != null) {
                 session.close();
